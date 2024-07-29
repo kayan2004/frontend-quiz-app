@@ -206,3 +206,41 @@ answerButtons.forEach((answerButton) => {
 submitButton.addEventListener("click", handleSubmitButtonClick);
 
 playAgainButton.addEventListener("click", handlePlayAgainButton);
+
+/* Hanlding Theme Button*/
+const themeButton = document.querySelector("#toggle-button");
+var handleThemeButton = () => {
+  const ball = themeButton.querySelector("#ball");
+  ball.classList.toggle("toggle-right");
+  ball.classList.toggle("toggle-left");
+
+  const sunElement = document.querySelector("#sun");
+  const moonElement = document.querySelector("#moon");
+
+  const sunDark = "starter-code/assets/images/icon-sun-dark.svg";
+  const moonDark = "starter-code/assets/images/icon-moon-dark.svg";
+
+  const sunLight = "starter-code/assets/images/icon-sun-light.svg";
+  const moonLight = "starter-code/assets/images/icon-moon-light.svg";
+
+  if (sunElement.src.endsWith(sunDark)) {
+    sunElement.src = sunLight;
+  } else {
+    sunElement.src = sunDark;
+  }
+
+  if (moonElement.src.endsWith(moonDark)) {
+    moonElement.src = moonLight;
+  } else {
+    moonElement.src = moonDark;
+  }
+
+  const allElements = document.querySelectorAll("*");
+
+  console.log(allElements);
+  allElements.forEach((element) => {
+    element.classList.toggle("dark-theme");
+  });
+};
+
+themeButton.addEventListener("click", handleThemeButton);

@@ -15,7 +15,7 @@
 
     <title>Frontend Mentor | Frontend quiz app</title>
   </head>
-  <body>
+  <body class="x">
     <header>
       <div class="game-details-container hidden">
         <div class="image-wrapper">
@@ -32,14 +32,16 @@
           src="starter-code/assets/images/icon-sun-dark.svg"
           alt="sun light icon"
           class="theme-icon"
+          id="sun"
         />
         <button id="toggle-button">
-          <div id="ball" class=""></div>
+          <div id="ball" class="toggle-left"></div>
         </button>
         <img
           src="starter-code/assets/images/icon-moon-dark.svg"
           alt="moon light icon"
           class="theme-icon"
+          id="moon"
         />
       </div>
     </header>
@@ -131,7 +133,7 @@
             src="starter-code/assets/images/icon-incorrect.svg"
             alt="incorrect icon"
           />
-          <span>Please select an answer.</span>
+          <span>Please select an answer</span>
         </p>
       </section>
 
@@ -139,7 +141,7 @@
 
       <!-- Quiz completed start -->
       <section id="completed-container" class="hidden">
-        <h3>Quiz completed <strong>You scored...</strong></h3>
+        <h3>Quiz completed <br /><strong>You scored...</strong></h3>
 
         <div class="result-container">
           <div class="game-details-container">
