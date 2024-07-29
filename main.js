@@ -170,6 +170,7 @@ var handleEndOfQuiz = () => {
 
   gameModeName.textContent = currentQuiz.title.trim();
   questionNumber = 0;
+  score = 0;
 };
 var displayNextQuestion = () => {
   if (questionNumber >= currentQuiz.questions.length) {
