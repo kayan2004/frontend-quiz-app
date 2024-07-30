@@ -61,6 +61,13 @@ var handleNextQuestionButtonClick = (e) => {
   resetPage();
   enableButtons();
   displayNextQuestion();
+
+  const content = document
+    .querySelector("#question-container")
+    .querySelector(".content-container")
+    .querySelector(".content");
+  console.log(content);
+  content.style.width = `${questionNumber * 10}%`;
   submitButton.textContent = "Submit Answer";
   questionNumberElement.textContent = questionNumber;
 
@@ -245,3 +252,5 @@ var handleThemeButton = () => {
 };
 
 themeButton.addEventListener("click", handleThemeButton);
+
+/* handling content-container */

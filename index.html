@@ -49,11 +49,13 @@
       <!-- Quiz menu start -->
 
       <section id="menu-container" class="">
-        <h1>
-          Welcome to the <br />
-          <strong>Frontend Quiz!</strong>
-        </h1>
-        <p id="menu-details">Pick a subject to get started.</p>
+        <div class="menu-heading">
+          <h1>
+            Welcome to the <br />
+            <strong>Frontend Quiz!</strong>
+          </h1>
+          <p id="menu-details">Pick a subject to get started.</p>
+        </div>
         <div class="buttons-container">
           <button id="html-button" class="menu-button">
             <div class="image-wrapper HTML">
@@ -98,43 +100,47 @@
 
       <!-- Quiz question start -->
       <section id="question-container" class="hidden">
-        <span id="question-number">
-          Question
-          <strong id="current-question-number">1</strong>
-          of 10
-        </span>
-        <p id="question">Which of these color contrast is good?</p>
-        <div class="content-container">
-          <div class="content"></div>
+        <div class="question-heading">
+          <span id="question-number">
+            Question
+            <strong id="current-question-number">1</strong>
+            of 10
+          </span>
+          <p id="question">Which of these color contrast is good?</p>
+          <div class="content-container">
+            <div class="content"></div>
+          </div>
         </div>
-        <div class="buttons-container">
-          <button class="answer-button">
-            <strong class="choice">A</strong>
-            <span class="button-text"></span>
-          </button>
-          <button class="answer-button">
-            <strong class="choice">B</strong>
-            <span class="button-text"></span>
-          </button>
-          <button class="answer-button">
-            <strong class="choice">C</strong>
-            <span class="button-text"></span>
-          </button>
-          <button class="answer-button">
-            <strong class="choice">D</strong>
-            <span class="button-text"></span>
-          </button>
-          <button class="submit-play-again-button" id="submit-button">
-            Submit Answer
-          </button>
+        <div class="button-error-container">
+          <div class="buttons-container">
+            <button class="answer-button">
+              <strong class="choice">A</strong>
+              <span class="button-text"></span>
+            </button>
+            <button class="answer-button">
+              <strong class="choice">B</strong>
+              <span class="button-text"></span>
+            </button>
+            <button class="answer-button">
+              <strong class="choice">C</strong>
+              <span class="button-text"></span>
+            </button>
+            <button class="answer-button">
+              <strong class="choice">D</strong>
+              <span class="button-text"></span>
+            </button>
+            <button class="submit-play-again-button" id="submit-button">
+              Submit Answer
+            </button>
+          </div>
+          <p id="error-message" class="hidden">
+            <img
+              src="starter-code/assets/images/icon-incorrect.svg"
+              alt="incorrect icon"
+            />
+            <span>Please select an answer</span>
+          </p>
         </div>
-        <p id="error-message" class="hidden">
-          <img
-            src="starter-code/assets/images/icon-incorrect.svg"
-            alt="incorrect icon"
-          />
-          <span>Please select an answer</span>
-        </p>
       </section>
 
       <!-- Quiz question end -->
@@ -142,25 +148,25 @@
       <!-- Quiz completed start -->
       <section id="completed-container" class="hidden">
         <h3>Quiz completed <br /><strong>You scored...</strong></h3>
-
-        <div class="result-container">
-          <div class="game-details-container">
-            <div class="image-wrapper">
-              <img
-                src="starter-code/assets/images/icon-accessibility.svg"
-                alt="accessibility icon"
-                class="game-mode-icon"
-              />
+        <div class="game-details-button-container">
+          <div class="result-container">
+            <div class="game-details-container">
+              <div class="image-wrapper">
+                <img
+                  src="starter-code/assets/images/icon-accessibility.svg"
+                  alt="accessibility icon"
+                  class="game-mode-icon"
+                />
+              </div>
+              <h2 class="game-mode-name"></h2>
             </div>
-            <h2 class="game-mode-name"></h2>
+            <strong id="score">8</strong>
+            <span>out of 10</span>
           </div>
-          <strong id="score">8</strong>
-
-          <span>out of 10</span>
+          <button id="play-again-button" class="submit-play-again-button">
+            Play Again
+          </button>
         </div>
-        <button id="play-again-button" class="submit-play-again-button">
-          Play Again
-        </button>
       </section>
       <!-- Quiz completed end -->
     </main>
